@@ -1,8 +1,9 @@
 function getAndPrintHTML (options) {
 
         var https = require('https');
+        
         var data = '';
-    
+
         // notice that https.get takes a callback with one parameter -
         // response, which is a Stream that represents the HTTP response
         https.get(requestOptions, function(response) {
@@ -23,12 +24,11 @@ function getAndPrintHTML (options) {
             console.log(err.stack);
             });
         });
-    }
+}
 
     getAndPrintHTML();
   
-  var requestOptions = {
+var requestOptions = {
     host: 'sytantris.github.io',
     path: '/http-examples/step3.html'
-  };
-  
+};
